@@ -1,0 +1,65 @@
+basic_sim_parameters
+{
+	etalon_result_catalogue string
+	threshold_simulation_num int
+	seed int
+	probes
+    	{
+		tree_cells
+		{
+			use int
+			in_balk int
+			cell_num int
+			etalon_result_t_c_file_name string
+		}
+
+		balk_cells
+		{	
+			use int
+			needle_diam int
+			etalon_result_b_c_file_name string
+    		}		 
+	}
+	evolution
+	{
+		driver_adv float
+		mutation_rate float
+		driver_mutation_rate float
+		stop_time_cell_num int
+		simulation_regime int
+	}
+}
+
+inference_parameters
+{
+	log_scale_search_space
+	{
+		driver_advantage float
+		mutation_rate float
+		driver_mutation_rate float 
+	}
+	algorithm_parameters
+	{
+		final_iteration int
+		final_epsilon float
+		p_acc_min float
+		parameter_population_number int
+		parameter_population_num_alpha int
+	}
+	comparison_parameters 
+	{
+		tree_dist_type int
+		balk_dist_type int
+		proportion_of_tree_dist float
+		threshold_frac_cell_diff float
+		threshold_frac_mut_diff float
+		piece_num float
+	}
+	basic_settings
+	{
+		current_result_file_name string
+		log_file_name string
+	}
+}
+
+
